@@ -602,6 +602,10 @@ RewriteRule ^(.*)\.css$ '.$_POST['base'].'/core/$1.css [L]';
 			$db->insert('search', $v);
 		}
 		$db->doCommit();
+
+		// run composer
+		$command = "php composer.phar install";
+      	$output = shell_exec($command);
     }
     
 	/** 
