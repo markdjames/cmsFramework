@@ -59,7 +59,7 @@ class Site {
 				if (!in_array($p, $map_output)) {
 					switch ($style) {
 						case 'list':
-							$output .= "\n\t<li><a href='".$p."'>".ucwords(str_replace("_", " ", $key))."</a>";	
+							$output .= "\n\t<li><a href='".str_replace(DIR, "", $p)."'>".ucwords(str_replace("_", " ", $key))."</a>";	
 							break;
 						case 'select':
 							$output .= "\n\t<option value='".str_replace(DIR, "", $p)."'>".str_replace(DIR, "", $path)."/".$key."</option>";	
