@@ -8,7 +8,7 @@ setcookie(session_name(),session_id(),strtotime('+1 day'), '/');
 if (!isset($_SESSION['token'])) $_SESSION['token'] = uniqid();
 
 $base = realpath(dirname(__FILE__) . '/..');
-if (!file_exists($base."/../lib/config.php")) header('Location: /install.php');
+if (!file_exists($base."/../lib/config.php")) header('Location: install.php');
 require $base."/../lib/config.php";
 
 require $base."/lib/locale.php";
