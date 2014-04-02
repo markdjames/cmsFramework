@@ -1,0 +1,17 @@
+{
+	"name": "markdjames/cmsframework",
+	"homepage": "https://github.com/markdjames/cmsFramework",
+	"authors": [
+        {
+            "name": "Mark James",
+            "email": "markdjames@gmail.com",
+            "homepage": "http://markjamesnet.co.uk",
+            "role": "Developer"
+        }
+    ],
+	"minimum-stability": "dev",
+	"require": {
+        "php": ">=5.0.0",
+		"mobiledetect/mobiledetectlib": "master"
+    }
+}
