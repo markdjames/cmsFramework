@@ -59,13 +59,13 @@ class Site {
 				if (!in_array($p, $map_output)) {
 					switch ($style) {
 						case 'list':
-							$output .= "\n\t<li><a href='".str_replace(DIR, "", $p)."'>".ucwords(str_replace("_", " ", $key))."</a>";	
+							$output .= "\n\t<li><a href='".str_replace(BASE, DIR, $p)."'>".ucwords(str_replace("_", " ", $key))."</a>";	
 							break;
 						case 'select':
-							$output .= "\n\t<option value='".str_replace(DIR, "", $p)."'>".str_replace(DIR, "", $path)."/".$key."</option>";	
+							$output .= "\n\t<option value='".str_replace(DBASE, DIR, $p)."'>".str_replace(BASE, DIR, $path)."/".$key."</option>";	
 							break;
 						case 'array':
-							$output[] = str_replace(DIR, "", $p);
+							$output[] = str_replace(BASE, DIR, $p);
 							break;
 						
 					}
@@ -83,13 +83,13 @@ class Site {
 				if (!in_array($p, $map_output) && !is_numeric($key)) {
 					switch ($style) {
 						case 'list':
-							$output .= "\n<li><a href='".$p."'>".ucwords(str_replace("_", " ", $page))."</a>";
+							$output .= "\n<li><a href='".str_replace(BASE, DIR, $p)."'>".ucwords(str_replace("_", " ", $page))."</a>";
 							break;
 						case 'select':
-							$output .= "\n\t<option value='".str_replace(DIR, "", $p)."'>".str_replace(DIR, "", $path)."/".$page."</option>";	
+							$output .= "\n\t<option value='".str_replace(BASE, DIR, $p)."'>".str_replace(BASE, DIR, $path)."/".$page."</option>";	
 							break;
 						case 'array':
-							$output[] = str_replace(DIR, "", $p);
+							$output[] = str_replace(BASE, DIR, $p);
 							break;
 						
 					}
